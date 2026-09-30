@@ -1,0 +1,677 @@
+[
+    {
+        "NOMBRE_REGION": "Antofagasta",
+        "NOMBRE_COMUNA": "Antofagasta",
+        "CLIENTES_AFECTADOS": 244
+    },
+    {
+        "NOMBRE_REGION": "Antofagasta",
+        "NOMBRE_COMUNA": "Calama",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Antofagasta",
+        "NOMBRE_COMUNA": "Tocopilla",
+        "CLIENTES_AFECTADOS": 3
+    },
+    {
+        "NOMBRE_REGION": "Arica y Parinacota",
+        "NOMBRE_COMUNA": "Arica",
+        "CLIENTES_AFECTADOS": 6
+    },
+    {
+        "NOMBRE_REGION": "Atacama",
+        "NOMBRE_COMUNA": "Copiapo",
+        "CLIENTES_AFECTADOS": 154
+    },
+    {
+        "NOMBRE_REGION": "Atacama",
+        "NOMBRE_COMUNA": "Vallenar",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Aysén",
+        "NOMBRE_COMUNA": "Coyhaique",
+        "CLIENTES_AFECTADOS": 4
+    },
+    {
+        "NOMBRE_REGION": "Biobio",
+        "NOMBRE_COMUNA": "Arauco",
+        "CLIENTES_AFECTADOS": 101
+    },
+    {
+        "NOMBRE_REGION": "Biobio",
+        "NOMBRE_COMUNA": "Concepcion",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Biobio",
+        "NOMBRE_COMUNA": "Lebu",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Biobio",
+        "NOMBRE_COMUNA": "Lota",
+        "CLIENTES_AFECTADOS": 2
+    },
+    {
+        "NOMBRE_REGION": "Biobio",
+        "NOMBRE_COMUNA": "Mulchen",
+        "CLIENTES_AFECTADOS": 2
+    },
+    {
+        "NOMBRE_REGION": "Biobio",
+        "NOMBRE_COMUNA": "Penco",
+        "CLIENTES_AFECTADOS": 2
+    },
+    {
+        "NOMBRE_REGION": "Biobio",
+        "NOMBRE_COMUNA": "San Pedro de la Paz",
+        "CLIENTES_AFECTADOS": 5
+    },
+    {
+        "NOMBRE_REGION": "Biobio",
+        "NOMBRE_COMUNA": "Talcahuano",
+        "CLIENTES_AFECTADOS": 6
+    },
+    {
+        "NOMBRE_REGION": "Coquimbo",
+        "NOMBRE_COMUNA": "Coquimbo",
+        "CLIENTES_AFECTADOS": 3
+    },
+    {
+        "NOMBRE_REGION": "Coquimbo",
+        "NOMBRE_COMUNA": "La Serena",
+        "CLIENTES_AFECTADOS": 5
+    },
+    {
+        "NOMBRE_REGION": "Coquimbo",
+        "NOMBRE_COMUNA": "Paiguano",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Coquimbo",
+        "NOMBRE_COMUNA": "Vicuña",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "La Araucania",
+        "NOMBRE_COMUNA": "Angol",
+        "CLIENTES_AFECTADOS": 48
+    },
+    {
+        "NOMBRE_REGION": "La Araucania",
+        "NOMBRE_COMUNA": "Carahue",
+        "CLIENTES_AFECTADOS": 3
+    },
+    {
+        "NOMBRE_REGION": "La Araucania",
+        "NOMBRE_COMUNA": "Cholchol",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "La Araucania",
+        "NOMBRE_COMUNA": "Collipulli",
+        "CLIENTES_AFECTADOS": 3
+    },
+    {
+        "NOMBRE_REGION": "La Araucania",
+        "NOMBRE_COMUNA": "Cunco",
+        "CLIENTES_AFECTADOS": 30
+    },
+    {
+        "NOMBRE_REGION": "La Araucania",
+        "NOMBRE_COMUNA": "Curarrehue",
+        "CLIENTES_AFECTADOS": 2
+    },
+    {
+        "NOMBRE_REGION": "La Araucania",
+        "NOMBRE_COMUNA": "Freire",
+        "CLIENTES_AFECTADOS": 28
+    },
+    {
+        "NOMBRE_REGION": "La Araucania",
+        "NOMBRE_COMUNA": "Galvarino",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "La Araucania",
+        "NOMBRE_COMUNA": "Gorbea",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "La Araucania",
+        "NOMBRE_COMUNA": "Lautaro",
+        "CLIENTES_AFECTADOS": 5
+    },
+    {
+        "NOMBRE_REGION": "La Araucania",
+        "NOMBRE_COMUNA": "Loncoche",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "La Araucania",
+        "NOMBRE_COMUNA": "Lumaco",
+        "CLIENTES_AFECTADOS": 3
+    },
+    {
+        "NOMBRE_REGION": "La Araucania",
+        "NOMBRE_COMUNA": "Nueva Imperial",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "La Araucania",
+        "NOMBRE_COMUNA": "Padre Las Casas",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "La Araucania",
+        "NOMBRE_COMUNA": "Perquenco",
+        "CLIENTES_AFECTADOS": 3
+    },
+    {
+        "NOMBRE_REGION": "La Araucania",
+        "NOMBRE_COMUNA": "Pitrufquen",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "La Araucania",
+        "NOMBRE_COMUNA": "Pucon",
+        "CLIENTES_AFECTADOS": 4
+    },
+    {
+        "NOMBRE_REGION": "La Araucania",
+        "NOMBRE_COMUNA": "Puren",
+        "CLIENTES_AFECTADOS": 79
+    },
+    {
+        "NOMBRE_REGION": "La Araucania",
+        "NOMBRE_COMUNA": "Renaico",
+        "CLIENTES_AFECTADOS": 4
+    },
+    {
+        "NOMBRE_REGION": "La Araucania",
+        "NOMBRE_COMUNA": "Temuco",
+        "CLIENTES_AFECTADOS": 2
+    },
+    {
+        "NOMBRE_REGION": "La Araucania",
+        "NOMBRE_COMUNA": "Teodoro Schmidt",
+        "CLIENTES_AFECTADOS": 20
+    },
+    {
+        "NOMBRE_REGION": "La Araucania",
+        "NOMBRE_COMUNA": "Traiguen",
+        "CLIENTES_AFECTADOS": 2
+    },
+    {
+        "NOMBRE_REGION": "La Araucania",
+        "NOMBRE_COMUNA": "Victoria",
+        "CLIENTES_AFECTADOS": 2
+    },
+    {
+        "NOMBRE_REGION": "La Araucania",
+        "NOMBRE_COMUNA": "Vilcun",
+        "CLIENTES_AFECTADOS": 4
+    },
+    {
+        "NOMBRE_REGION": "La Araucania",
+        "NOMBRE_COMUNA": "Villarrica",
+        "CLIENTES_AFECTADOS": 17
+    },
+    {
+        "NOMBRE_REGION": "Los Lagos",
+        "NOMBRE_COMUNA": "Ancud",
+        "CLIENTES_AFECTADOS": 12
+    },
+    {
+        "NOMBRE_REGION": "Los Lagos",
+        "NOMBRE_COMUNA": "Calbuco",
+        "CLIENTES_AFECTADOS": 16
+    },
+    {
+        "NOMBRE_REGION": "Los Lagos",
+        "NOMBRE_COMUNA": "Castro",
+        "CLIENTES_AFECTADOS": 29
+    },
+    {
+        "NOMBRE_REGION": "Los Lagos",
+        "NOMBRE_COMUNA": "Dalcahue",
+        "CLIENTES_AFECTADOS": 41
+    },
+    {
+        "NOMBRE_REGION": "Los Lagos",
+        "NOMBRE_COMUNA": "Fresia",
+        "CLIENTES_AFECTADOS": 3
+    },
+    {
+        "NOMBRE_REGION": "Los Lagos",
+        "NOMBRE_COMUNA": "Frutillar",
+        "CLIENTES_AFECTADOS": 12
+    },
+    {
+        "NOMBRE_REGION": "Los Lagos",
+        "NOMBRE_COMUNA": "Hualaihue",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Los Lagos",
+        "NOMBRE_COMUNA": "Maullin",
+        "CLIENTES_AFECTADOS": 15
+    },
+    {
+        "NOMBRE_REGION": "Los Lagos",
+        "NOMBRE_COMUNA": "Osorno",
+        "CLIENTES_AFECTADOS": 254
+    },
+    {
+        "NOMBRE_REGION": "Los Lagos",
+        "NOMBRE_COMUNA": "Puerto Montt",
+        "CLIENTES_AFECTADOS": 31
+    },
+    {
+        "NOMBRE_REGION": "Los Lagos",
+        "NOMBRE_COMUNA": "Puerto Varas",
+        "CLIENTES_AFECTADOS": 630
+    },
+    {
+        "NOMBRE_REGION": "Los Lagos",
+        "NOMBRE_COMUNA": "Purranque",
+        "CLIENTES_AFECTADOS": 5
+    },
+    {
+        "NOMBRE_REGION": "Los Lagos",
+        "NOMBRE_COMUNA": "Queilen",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Los Lagos",
+        "NOMBRE_COMUNA": "Quellon",
+        "CLIENTES_AFECTADOS": 4
+    },
+    {
+        "NOMBRE_REGION": "Los Lagos",
+        "NOMBRE_COMUNA": "Quemchi",
+        "CLIENTES_AFECTADOS": 34
+    },
+    {
+        "NOMBRE_REGION": "Los Lagos",
+        "NOMBRE_COMUNA": "Quinchao",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Los Lagos",
+        "NOMBRE_COMUNA": "Rio Negro",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Los Lagos",
+        "NOMBRE_COMUNA": "San Juan de la Costa",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Los Lagos",
+        "NOMBRE_COMUNA": "San Pablo",
+        "CLIENTES_AFECTADOS": 3
+    },
+    {
+        "NOMBRE_REGION": "Los Rios",
+        "NOMBRE_COMUNA": "La Union",
+        "CLIENTES_AFECTADOS": 4
+    },
+    {
+        "NOMBRE_REGION": "Los Rios",
+        "NOMBRE_COMUNA": "Lago Ranco",
+        "CLIENTES_AFECTADOS": 11
+    },
+    {
+        "NOMBRE_REGION": "Los Rios",
+        "NOMBRE_COMUNA": "Los Lagos",
+        "CLIENTES_AFECTADOS": 3
+    },
+    {
+        "NOMBRE_REGION": "Los Rios",
+        "NOMBRE_COMUNA": "Mafil",
+        "CLIENTES_AFECTADOS": 3
+    },
+    {
+        "NOMBRE_REGION": "Los Rios",
+        "NOMBRE_COMUNA": "Mariquina",
+        "CLIENTES_AFECTADOS": 3
+    },
+    {
+        "NOMBRE_REGION": "Los Rios",
+        "NOMBRE_COMUNA": "Paillaco",
+        "CLIENTES_AFECTADOS": 3
+    },
+    {
+        "NOMBRE_REGION": "Los Rios",
+        "NOMBRE_COMUNA": "Panguipulli",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Los Rios",
+        "NOMBRE_COMUNA": "Rio Bueno",
+        "CLIENTES_AFECTADOS": 8
+    },
+    {
+        "NOMBRE_REGION": "Los Rios",
+        "NOMBRE_COMUNA": "Valdivia",
+        "CLIENTES_AFECTADOS": 92
+    },
+    {
+        "NOMBRE_REGION": "Magallanes",
+        "NOMBRE_COMUNA": "Natales",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Maule",
+        "NOMBRE_COMUNA": "Cauquenes",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Maule",
+        "NOMBRE_COMUNA": "Curico",
+        "CLIENTES_AFECTADOS": 3
+    },
+    {
+        "NOMBRE_REGION": "Maule",
+        "NOMBRE_COMUNA": "Longavi",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Maule",
+        "NOMBRE_COMUNA": "Maule",
+        "CLIENTES_AFECTADOS": 4
+    },
+    {
+        "NOMBRE_REGION": "Maule",
+        "NOMBRE_COMUNA": "Parral",
+        "CLIENTES_AFECTADOS": 4
+    },
+    {
+        "NOMBRE_REGION": "Maule",
+        "NOMBRE_COMUNA": "Pelluhue",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Maule",
+        "NOMBRE_COMUNA": "Retiro",
+        "CLIENTES_AFECTADOS": 2
+    },
+    {
+        "NOMBRE_REGION": "Maule",
+        "NOMBRE_COMUNA": "Romeral",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Maule",
+        "NOMBRE_COMUNA": "San Clemente",
+        "CLIENTES_AFECTADOS": 2
+    },
+    {
+        "NOMBRE_REGION": "Maule",
+        "NOMBRE_COMUNA": "San Javier",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Maule",
+        "NOMBRE_COMUNA": "Talca",
+        "CLIENTES_AFECTADOS": 2
+    },
+    {
+        "NOMBRE_REGION": "Maule",
+        "NOMBRE_COMUNA": "Villa Alegre",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Buin",
+        "CLIENTES_AFECTADOS": 2
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Cerrillos",
+        "CLIENTES_AFECTADOS": 4
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Cerro Navia",
+        "CLIENTES_AFECTADOS": 4
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Colina",
+        "CLIENTES_AFECTADOS": 9
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Conchali",
+        "CLIENTES_AFECTADOS": 2
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Estacion Central",
+        "CLIENTES_AFECTADOS": 8
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Huechuraba",
+        "CLIENTES_AFECTADOS": 2
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Independencia",
+        "CLIENTES_AFECTADOS": 6
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "La Florida",
+        "CLIENTES_AFECTADOS": 2
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "La Pintana",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "La Reina",
+        "CLIENTES_AFECTADOS": 3
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Lampa",
+        "CLIENTES_AFECTADOS": 5
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Las Condes",
+        "CLIENTES_AFECTADOS": 5
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Lo Barnechea",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Lo Espejo",
+        "CLIENTES_AFECTADOS": 4
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Lo Prado",
+        "CLIENTES_AFECTADOS": 2
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Maipu",
+        "CLIENTES_AFECTADOS": 1807
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Paine",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Peñaflor",
+        "CLIENTES_AFECTADOS": 164
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Peñalolen",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Pirque",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Providencia",
+        "CLIENTES_AFECTADOS": 491
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Pudahuel",
+        "CLIENTES_AFECTADOS": 5
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Puente Alto",
+        "CLIENTES_AFECTADOS": 2
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Quilicura",
+        "CLIENTES_AFECTADOS": 5
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Quinta Normal",
+        "CLIENTES_AFECTADOS": 11
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Recoleta",
+        "CLIENTES_AFECTADOS": 3
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Renca",
+        "CLIENTES_AFECTADOS": 7
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "San Bernardo",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "San Joaquin",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "San Miguel",
+        "CLIENTES_AFECTADOS": 4
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Santiago",
+        "CLIENTES_AFECTADOS": 13
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Vitacura",
+        "CLIENTES_AFECTADOS": 2
+    },
+    {
+        "NOMBRE_REGION": "Metropolitana",
+        "NOMBRE_COMUNA": "Ñuñoa",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "O`Higgins",
+        "NOMBRE_COMUNA": "Lolol",
+        "CLIENTES_AFECTADOS": 31
+    },
+    {
+        "NOMBRE_REGION": "O`Higgins",
+        "NOMBRE_COMUNA": "Machali",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "O`Higgins",
+        "NOMBRE_COMUNA": "Mostazal",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "O`Higgins",
+        "NOMBRE_COMUNA": "Pichilemu",
+        "CLIENTES_AFECTADOS": 8
+    },
+    {
+        "NOMBRE_REGION": "O`Higgins",
+        "NOMBRE_COMUNA": "Quinta de Tilcoco",
+        "CLIENTES_AFECTADOS": 83
+    },
+    {
+        "NOMBRE_REGION": "O`Higgins",
+        "NOMBRE_COMUNA": "San Fernando",
+        "CLIENTES_AFECTADOS": 2
+    },
+    {
+        "NOMBRE_REGION": "Tarapaca",
+        "NOMBRE_COMUNA": "Alto Hospicio",
+        "CLIENTES_AFECTADOS": 4
+    },
+    {
+        "NOMBRE_REGION": "Tarapaca",
+        "NOMBRE_COMUNA": "Iquique",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Valparaiso",
+        "NOMBRE_COMUNA": "Nogales",
+        "CLIENTES_AFECTADOS": 39
+    },
+    {
+        "NOMBRE_REGION": "Valparaiso",
+        "NOMBRE_COMUNA": "Puchuncavi",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Valparaiso",
+        "NOMBRE_COMUNA": "Quilpue",
+        "CLIENTES_AFECTADOS": 146
+    },
+    {
+        "NOMBRE_REGION": "Valparaiso",
+        "NOMBRE_COMUNA": "San Esteban",
+        "CLIENTES_AFECTADOS": 241
+    },
+    {
+        "NOMBRE_REGION": "Ñuble",
+        "NOMBRE_COMUNA": "Chillan",
+        "CLIENTES_AFECTADOS": 8
+    },
+    {
+        "NOMBRE_REGION": "Ñuble",
+        "NOMBRE_COMUNA": "Coihueco",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Ñuble",
+        "NOMBRE_COMUNA": "El Carmen",
+        "CLIENTES_AFECTADOS": 1
+    },
+    {
+        "NOMBRE_REGION": "Ñuble",
+        "NOMBRE_COMUNA": "Pinto",
+        "CLIENTES_AFECTADOS": 1
+    }
+]
