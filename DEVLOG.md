@@ -22,15 +22,15 @@ Formato: qué hice / dónde quedé / próximo paso.
 
 ## 2026-10-04 · Sesión 2
 **Hice:**
-- Probé GetPorFecha con fechas pasadas: la SEC tiene historial por hora, al menos desde 2024.
-- Guardé muestras del 2026-10-04 y del temporal del 2024-08-02.
-- Detecté que la hora en curso cambia y que las horas pasadas pueden corregirse.
-- Registré las decisiones D-009 (SEC como única fuente de la v0.1) y D-010 (re-consulta de horas cerradas).
-
+- Historial SEC confirmado (por hora, desde 2024) y Normas de Uso revisadas (D-009, D-010, D-011).
+- Diseño de BD (docs/database.md), Docker con PostGIS y Redis, migración inicial.
+- Seeds: 346 comunas (BCN) y 306 alias de nombres SEC.
+- Collector SEC funcionando de punta a punta.
+- Script de backfill gradual del historial.
+  
 **Dónde quedé:**
-- Fase 0 prácticamente terminada. Enel y CGE pasan a la v0.2.
+- Pipeline SEC → collector → PostGIS operativo. Backfill listo para ejecutarse.
 
 **Próximo paso:**
-- Leer las Normas de Uso de la SEC (si no se alcanzó hoy).
-- Diseñar el esquema de base de datos (snapshots, comunas, incidentes).
-- Crear el esqueleto del monorepo.
+- Ejecutar el backfill por tramos.
+- Derivación de incidentes.

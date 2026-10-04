@@ -18,6 +18,8 @@ export interface IngestSummary {
   comunasAfectadas: number;
   clientesTotal: number;
   anomalies: number;
+  /** Motivo del fallo, si lo hubo ('empty_response' = la SEC no devolvió datos). */
+  error?: string;
 }
 
 /** Ingresa una hora completa: crudo → resolución de nombres → hourly_outages + fetched_hours. */
@@ -33,19 +35,28 @@ export async function ingestHour(
     [SOURCE],
   );
   const runId = Number(runRows[0].id);
-  const failed = (rowsReceived = 0): IngestSummary => ({
-    runId, periodStart, status: 'failed', rowsReceived, comunasAfectadas: 0, clientesTotal: 0, anomalies: 0,
+  const failed = (error: string): IngestSummary => ({
+    runId, periodStart, status: 'failed', rowsReceived: 0, comunasAfectadas: 0, clientesTotal: 0, anomalies: 0, error,
   });
+  const markFailed = (error: string) =>
+    pool.query(`UPDATE ingestion_runs SET status = 'failed', finished_at = now(), error = $2 WHERE id = $1`, [
+      runId,
+      error,
+    ]);
 
   let result;
   try {
     result = await fetcher(hour);
   } catch (err) {
-    await pool.query(
-      `UPDATE ingestion_runs SET status = 'failed', finished_at = now(), error = $2 WHERE id = $1`,
-      [runId, String(err)],
-    );
-    return failed();
+    await markFailed(String(err));
+    return failed(String(err));
+  }
+
+  // Una respuesta vacía para todo Chile no significa "cero cortes": significa "sin datos".
+  // No se marca la hora como consultada, para no inventar ceros.
+  if (result.rows.length === 0) {
+    await markFailed('empty_response');
+    return failed('empty_response');
   }
 
   const [aliases, comunas] = await Promise.all([

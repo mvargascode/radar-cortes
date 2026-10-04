@@ -4,41 +4,44 @@ Ritmo estimado: 10–12 h semanales (noches entre semana + una sesión larga el 
 
 ## Fase 1 – v0.1: Electricidad RM
 
-### Semana 1 · Data discovery
-- [ ] Ficha SEC (`docs/sources/sec`)
-- [ ] Ficha Enel (`docs/sources/enel`)
-- [ ] Ficha CGE (`docs/sources/cge`)
-- [ ] Obtener polígonos oficiales de comunas de la RM
-- [ ] Decisión go/no-go registrada en `docs/decisions.md`
+### Semana 1 · Data discovery ✅
+- [x] Ficha SEC (`docs/sources/sec`)
+- [x] Obtener polígonos oficiales de comunas (BCN, 346 comunas)
+- [x] Decisión go/no-go registrada en `docs/decisions.md` (D-009)
+- ~~Ficha Enel~~ → movida a la v0.2 (D-009)
+- ~~Ficha CGE~~ → movida a la v0.2 (D-009)
 
-### Semana 2 · Esqueleto y primer collector
-- [ ] Monorepo: `apps/api`, `apps/web`, `workers/collectors`
-- [ ] `docker-compose` con PostgreSQL + PostGIS y Redis
-- [ ] Collector SEC guardando snapshots cada 15 min (retry, timeout, validación)
-- [ ] **Collector desplegado 24/7** (el historial empieza a acumularse)
+### Semana 2 · Base de datos y primer collector ✅
+- [x] `docker-compose` con PostgreSQL + PostGIS y Redis
+- [x] Esquema inicial de base de datos (`db/migrations`)
+- [x] Seeds de comunas y alias de nombres SEC (`db/seeds`)
+- [x] Collector SEC (retry, timeout, validación, re-consulta de horas, modo `--watch`)
 
-### Semana 3 · Modelo de datos e incidentes
-- [ ] Comunas cargadas en PostGIS
-- [ ] Tablas de snapshots e incidentes
-- [ ] Lógica que deriva incidentes desde snapshots
-- [ ] Tests con fixtures reales de la Fase 0
+### Semana 3 · Historial e incidentes
+- [ ] Backfill gradual del historial SEC
+- [ ] Lógica que deriva incidentes desde `hourly_outages`
+- [ ] Tests de derivación con fixtures reales (temporal 2024)
 
 ### Semana 4 · API
+- [ ] Monorepo: `apps/api` (NestJS)
 - [ ] Estado actual por comuna
 - [ ] Incidentes activos
 - [ ] Historial de una comuna y métricas básicas
 - [ ] SSE para actualizaciones en vivo
 
 ### Semana 5 · Mapa
-- [ ] Mapa coroplético de comunas (MapLibre)
+- [ ] Monorepo: `apps/web` (React + MapLibre)
+- [ ] Mapa coroplético de comunas
 - [ ] Panel de detalle con línea de tiempo del incidente
 - [ ] Indicador "actualizado hace X min"
 
 ### Semana 6 · Producción y lanzamiento
-- [ ] Nginx + HTTPS
+- [ ] Despliegue (Railway): BD, collector 24/7, API y web
+- [ ] HTTPS y dominio
 - [ ] CI/CD con GitHub Actions
 - [ ] Backups de base de datos
 - [ ] Monitoreo y aviso de "datos desactualizados" si una fuente falla
+- [ ] Correo a la SEC (contactodau@sec.cl) presentando el proyecto
 - [ ] Publicar v0.1
 
 ## Fases siguientes
