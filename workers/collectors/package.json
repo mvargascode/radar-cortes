@@ -1,0 +1,27 @@
+{
+  "name": "@radar-cortes/collectors",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Collectors de Radar de Cortes (v0.1: SEC)",
+  "scripts": {
+    "collect": "tsx src/index.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.5",
+    "pg": "^8.23.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "@types/pg": "^8.23.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}
