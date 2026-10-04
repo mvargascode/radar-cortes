@@ -33,3 +33,17 @@ fixtures reales. n8n solo para automatizaciones secundarias.
 Cada fuente se documenta en docs/sources/<fuente>/README.md y se evalúa
 (usable / frágil / descartada), incluyendo condiciones de uso.
 Consultas de baja frecuencia (10–15 min).
+
+## D-009 · La SEC es la única fuente de la v0.1 (2026-10-04)
+La SEC cubre todas las distribuidoras y comunas, y entrega historial por hora
+(probado hasta agosto de 2024). Enel y CGE pasan a la v0.2 como enriquecimiento.
+
+## D-010 · Re-consulta de horas cerradas (2026-10-04)
+La hora en curso cambia mientras transcurre y las horas pasadas pueden corregirse.
+El collector guarda la hora actual "en vivo" y vuelve a consultar las horas
+recientes para quedarse con su valor definitivo.
+
+## D-011 · Acceso responsable a la SEC (2026-10-04)
+Las Normas de Uso no restringen la reutilización de información pública.
+El collector consulta cada 10–15 min, se identifica con User-Agent y contacto,
+descarga el historial de forma gradual y la interfaz cita a la SEC como fuente.

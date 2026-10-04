@@ -6,13 +6,13 @@
 - **Granularidad:** comuna (nacional, todas las regiones en una sola respuesta)
 - **¿Incluye distribuidora?:** No
 - **¿Incluye timestamp propio?:** No en GetPorFecha. Usar header `Date` de la respuesta o `GetHoraServer`.
-- **Frecuencia real de actualización:** pendiente (comparar dos capturas separadas por 15 min)
+- **Frecuencia real de actualización:** la hora en curso se actualiza mientras transcurre, y las horas pasadas pueden corregirse después (2026-09-30 0:00: 5.204 capturado a las 00:36 → 5.180 consultado el 2026-10-04).
 - **Identificadores estables:** No hay códigos. Solo nombres de región y comuna (ver Notas).
-- **¿Solo estado actual o también historial?:** pendiente. El payload recibe año, mes, día y hora: probar si acepta horas/fechas pasadas.
-- **robots.txt / términos de uso:** pendiente. Revisar https://www.sec.cl/area-ciudadana/normas-de-uso/
+- **¿Solo estado actual o también historial?:** Sí hay historial, una foto por hora, al menos desde 2024 (probado con 2024-08-02 12:00: 716.423 clientes en la RM).
+- **robots.txt / términos de uso:** Normas de Uso (leídas 2026-10-04): son una política de privacidad y los términos de las aplicaciones con clave. No mencionan reutilización de información pública ni prohíben el acceso automatizado. La SEC indica que monitorea el tráfico de red: consultar con baja frecuencia, identificarse con User-Agent y citar la fuente. Contacto: contactodau@sec.cl
 - **Riesgos:** endpoint interno no documentado (puede cambiar sin aviso); nombres de comuna sin normalizar.
-- **Muestras guardadas:** `GetPorFecha-2026-09-30-0045.json`
-- **Veredicto:** usable (preliminar, pendiente frecuencia y condiciones de uso)
+- **Muestras guardadas:** `GetPorFecha-2026-09-30-0045.json`, `GetPorFecha-2026-10-04-0015.json`, `GetPorFecha-2024-08-02-12-0026.json`
+- **Veredicto:** usable
 
 ## Endpoints
 
@@ -45,3 +45,4 @@ curl 'https://apps.sec.cl/INTONLINEv1/ClientesAfectados/GetPorFecha' \
   y "O`Higgins" con acento grave. Se necesita tabla de normalización nombre → código de comuna.
 - Según la SEC, los datos provienen de cargas de las distribuidoras y pueden variar en el tiempo:
   un snapshot puede corregirse después.
+- Temporal 2024-08-02 12:00: 299 comunas, 1.176.268 clientes en total; RM 716.423 (Las Condes 60.022, Maipú 55.935, Pudahuel 48.819). Sirve como fixture histórico.
