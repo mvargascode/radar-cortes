@@ -3,7 +3,7 @@ import { pool } from './db.js';
 import { hourKey, listHoursBackward } from './backfill-plan.js';
 import { ingestHour } from './ingest.js';
 import { fetchSecHour } from './sec/client.js';
-import { formatLocalHour, localHourToUtc, toLocalHour } from './time.js';
+import { formatLocalHour, localHourToUtc, toLocalHour, type LocalHour } from './time.js';
 
 /**
  * Backfill gradual del historial de la SEC (D-011).
@@ -15,6 +15,24 @@ import { formatLocalHour, localHourToUtc, toLocalHour } from './time.js';
  */
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+/**
+ * Ejecuta ingestHour reintentando si falla la BASE DE DATOS (no la SEC: esos fallos
+ * ya los registra ingestHour). Ej.: ECONNRESET si Docker reinicia la conexión.
+ * Devuelve null si la BD sigue sin responder después de los reintentos.
+ */
+async function ingestWithDbRetry(hour: LocalHour, maxAttempts = 5) {
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    try {
+      return await ingestHour(pool, fetchSecHour, hour, { isFinal: true });
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      console.error(`  [db] error en ${formatLocalHour(hour)}: ${msg} (intento ${attempt}/${maxAttempts})`);
+      if (attempt < maxAttempts) await sleep(attempt * 15_000); // 15 s, 30 s, 45 s...
+    }
+  }
+  return null;
+}
 
 async function main() {
   const { values } = parseArgs({
@@ -68,7 +86,11 @@ async function main() {
 
   for (const [i, hour] of pending.entries()) {
     if (stopping) break;
-    const s = await ingestHour(pool, fetchSecHour, hour, { isFinal: true });
+    const s = await ingestWithDbRetry(hour);
+    if (!s) {
+      console.error('\nLa base de datos no responde tras varios intentos. Revisa Docker y vuelve a ejecutar.');
+      break;
+    }
     const pct = (((i + 1) / pending.length) * 100).toFixed(1);
     console.log(
       `[${i + 1}/${pending.length} · ${pct}%] ${formatLocalHour(hour)} → ${s.status}` +
