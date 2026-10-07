@@ -46,3 +46,8 @@ curl 'https://apps.sec.cl/INTONLINEv1/ClientesAfectados/GetPorFecha' \
 - Según la SEC, los datos provienen de cargas de las distribuidoras y pueden variar en el tiempo:
   un snapshot puede corregirse después.
 - Temporal 2024-08-02 12:00: 299 comunas, 1.176.268 clientes en total; RM 716.423 (Las Condes 60.022, Maipú 55.935, Pudahuel 48.819). Sirve como fixture histórico.
+- Historial descargado: 2024-01-01 a 2026-10-07 (~24.000 horas).
+- Hueco conocido de la fuente: 2025-01-03 03:00–07:00 (hora de Chile); la SEC responde vacío.
+- Nombre antiguo en 2024: "Cabo de Hornos (ex-Navarino)" → Cabo de Hornos (12201).
+- Filas sin región ni comuna: ~1.200 horas, ~1.800 clientes en total. Irrecuperables.
+- Hora repetida del cambio de horario de abril: sin datos por diseño (D-013).

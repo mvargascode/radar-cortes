@@ -47,3 +47,16 @@ recientes para quedarse con su valor definitivo.
 Las Normas de Uso no restringen la reutilización de información pública.
 El collector consulta cada 10–15 min, se identifica con User-Agent y contacto,
 descarga el historial de forma gradual y la interfaz cita a la SEC como fuente.
+
+## D-012 · Significado de 'partial' (2026-10-06)
+Una hora es 'partial' solo si hay nombres sin traducir (requieren acción).
+Las filas sin nombre que envía la SEC se registran como anomalía, pero no
+marcan la hora como parcial. Las correcciones de alias se aplican con
+`npm run reprocess`, que recalcula desde raw_responses sin consultar a la SEC.
+
+## D-013 · Cambio de horario y huecos de datos (2026-10-07)
+La SEC usa hora local de Chile. En el cambio de horario de abril, la hora
+repetida existe una sola vez para la SEC: se guarda en su primera ocurrencia y
+la segunda queda sin datos por diseño. Las horas sin datos (incluidos los
+huecos de la fuente) no se interpretan como "cero cortes", y la derivación de
+incidentes no debe cerrar un incidente por un hueco de una hora.

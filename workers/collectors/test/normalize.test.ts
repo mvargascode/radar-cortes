@@ -51,3 +51,14 @@ describe('resolveRows', () => {
     expect(fixture.filter((r) => !r.NOMBRE_COMUNA)).toHaveLength(1);
   });
 });
+
+describe('statusFor (D-012)', async () => {
+  const { statusFor } = await import('../src/ingest.js');
+  const row = { NOMBRE_REGION: '', NOMBRE_COMUNA: '', CLIENTES_AFECTADOS: 1 };
+  it('las filas sin nombre no marcan la hora como parcial', () => {
+    expect(statusFor([{ kind: 'empty_name', row }])).toBe('success');
+  });
+  it('un nombre sin traducir sí la marca como parcial', () => {
+    expect(statusFor([{ kind: 'unresolved', row }])).toBe('partial');
+  });
+});
