@@ -22,12 +22,14 @@ Ritmo estimado: 10–12 h semanales (noches entre semana + una sesión larga el 
 - [x] Lógica que deriva incidentes desde `hourly_outages`
 - [x] Tests de derivación (casos sintéticos) y validación con el historial real (temporal 2024, apagón 2025)
 
-### Semana 4 · API
-- [ ] Monorepo: `apps/api` (NestJS)
-- [ ] Estado actual por comuna
-- [ ] Incidentes activos
-- [ ] Historial de una comuna y métricas básicas
-- [ ] SSE para actualizaciones en vivo
+### Semana 4 · API ✅
+- [x] Monorepo: `apps/api` (NestJS)
+- [x] Estado actual por comuna
+- [x] Incidentes activos
+- [x] Historial de una comuna y métricas básicas
+- [x] SSE para actualizaciones en vivo (LISTEN/NOTIFY)
+- [x] Ranking de comunas por impacto
+- [x] Ids de incidentes estables y recálculo automático en el collector
 
 ### Semana 5 · Mapa
 - [ ] Monorepo: `apps/web` (React + MapLibre)

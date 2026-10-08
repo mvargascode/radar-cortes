@@ -73,3 +73,14 @@ Simulación por umbral (RM, incidentes/año): 50 → 7.135 · 100 → 5.717 · 5
 - El ruido de fondo no se descarta: el mapa muestra el estado actual desde hourly_outages.
 Limitación: el umbral es absoluto porque la SEC no entrega el total de clientes por comuna.
 `npm run derive` recalcula todos los incidentes (idempotente).
+
+## D-015 · Diseño de la API (2026-10-08)
+- NestJS con SQL directo sobre `pg` (sin ORM): PostGIS y las estadísticas se expresan mejor en SQL.
+- Validación de parámetros con zod (respuesta 400 con el detalle).
+- Ids de incidentes estables: la derivación hace upsert sobre (source, type, cut, started_at)
+  y elimina los que ya no existen (migración 003). Los enlaces a `/incidents/:id` no se rompen.
+- El collector `--watch` recalcula incidentes en cada ciclo y avisa con `NOTIFY radar_updates`;
+  la API escucha con `LISTEN` y lo reenvía por SSE (`/api/stream`).
+- `stale` = la última ingesta exitosa tiene más de 35 minutos (el ciclo es de 15).
+- En la línea de tiempo, una hora sin datos se entrega como `null`, no como 0 (D-013).
+

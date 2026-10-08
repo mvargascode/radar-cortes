@@ -1,6 +1,7 @@
 import { parseArgs } from 'node:util';
 import { config } from './config.js';
 import { pool } from './db.js';
+import { deriveAll, notifyUpdate } from './incidents-store.js';
 import { ingestHour } from './ingest.js';
 import { fetchSecHour } from './sec/client.js';
 import { formatLocalHour, toLocalHour, type LocalHour } from './time.js';
@@ -17,12 +18,18 @@ async function runOne(hour: LocalHour, isFinal: boolean) {
   );
 }
 
-/** Un ciclo: las horas recién cerradas (definitivas) + la hora en curso (en vivo). */
+/**
+ * Un ciclo: las horas recién cerradas (definitivas) + la hora en curso (en vivo).
+ * Después recalcula los incidentes y avisa a la API (LISTEN/NOTIFY).
+ */
 async function cycle() {
   const now = Date.now();
   for (let i = RECHECK_HOURS; i >= 0; i--) {
     await runOne(toLocalHour(new Date(now - i * 3600_000)), i > 0);
   }
+  const d = await deriveAll(pool);
+  console.log(`[${new Date().toISOString()}] incidentes: ${d.total} (${d.open} abiertos) en ${d.seconds.toFixed(1)} s`);
+  await notifyUpdate(pool);
 }
 
 async function main() {
