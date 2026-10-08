@@ -18,9 +18,9 @@ Ritmo estimado: 10–12 h semanales (noches entre semana + una sesión larga el 
 - [x] Collector SEC (retry, timeout, validación, re-consulta de horas, modo `--watch`)
 
 ### Semana 3 · Historial e incidentes
-- [ ] Backfill gradual del historial SEC
-- [ ] Lógica que deriva incidentes desde `hourly_outages`
-- [ ] Tests de derivación con fixtures reales (temporal 2024)
+- [x] Backfill gradual del historial SEC
+- [x] Lógica que deriva incidentes desde `hourly_outages`
+- [x] Tests de derivación (casos sintéticos) y validación con el historial real (temporal 2024, apagón 2025)
 
 ### Semana 4 · API
 - [ ] Monorepo: `apps/api` (NestJS)

@@ -9,7 +9,8 @@
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "backfill": "tsx src/backfill.ts",
-    "reprocess": "tsx src/reprocess.ts"
+    "reprocess": "tsx src/reprocess.ts",
+    "derive": "tsx src/derive.ts"
   },
   "engines": {
     "node": ">=20"

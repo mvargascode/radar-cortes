@@ -60,3 +60,16 @@ repetida existe una sola vez para la SEC: se guarda en su primera ocurrencia y
 la segunda queda sin datos por diseño. Las horas sin datos (incluidos los
 huecos de la fuente) no se interpretan como "cero cortes", y la derivación de
 incidentes no debe cerrar un incidente por un hueco de una hora.
+
+## D-014 · Reglas de derivación de incidentes (2026-10-08)
+Basadas en el historial de la RM (2024-2026): las comunas tienen algún cliente sin
+luz el 85-98% de las horas, con mediana de 5-24 clientes (ruido de fondo).
+Simulación por umbral (RM, incidentes/año): 50 → 7.135 · 100 → 5.717 · 500 → 2.604 · 1.000 → 1.729.
+- Apertura: >= 500 clientes afectados en una hora (sobre el p95 de casi todas las comunas).
+- Cierre: 2 horas consultadas seguidas bajo 500 (un corte que "parpadea" no se parte).
+- Huecos de datos no cierran el incidente, salvo que superen 6 horas.
+- Gravedad: peak de clientes y cliente-horas.
+- Estado abierto: DETECTED (1 hora) o ACTIVE (2 o más). Cerrado: RESTORED.
+- El ruido de fondo no se descarta: el mapa muestra el estado actual desde hourly_outages.
+Limitación: el umbral es absoluto porque la SEC no entrega el total de clientes por comuna.
+`npm run derive` recalcula todos los incidentes (idempotente).

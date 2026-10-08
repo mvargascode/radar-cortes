@@ -16,6 +16,8 @@ npm test                                        # tests unitarios
 npm run collect                                 # un ciclo: 2 horas cerradas + hora en curso
 npm run collect -- --date 2024-08-02 --hour 12  # una hora específica (hora de Chile)
 npm run collect -- --watch                      # ciclo cada 15 min (Ctrl+C para detener)
+npm run derive -- --dry-run                     # simula la derivación de incidentes
+npm run derive                                  # recalcula todos los incidentes (D-014)
 ```
 
 ## Qué hace cada ciclo
