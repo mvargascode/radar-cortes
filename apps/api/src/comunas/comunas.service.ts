@@ -23,7 +23,12 @@ export class ComunasService {
          'features', coalesce(json_agg(json_build_object(
            'type', 'Feature',
            'id', cut,
-           'properties', json_build_object('cut', cut, 'nombre', nombre, 'region', region_nombre),
+           'properties', json_build_object(
+             'cut', cut, 'nombre', nombre, 'region', region_nombre,
+             -- Punto interior para ubicar etiquetas en el mapa.
+             'label', json_build_array(round(ST_X(ST_PointOnSurface(geom))::numeric, 5),
+                                       round(ST_Y(ST_PointOnSurface(geom))::numeric, 5))
+           ),
            'geometry', ST_AsGeoJSON(ST_SimplifyPreserveTopology(geom, 0.0005), 5)::json
          ) ORDER BY cut), '[]'::json)
        ) AS fc

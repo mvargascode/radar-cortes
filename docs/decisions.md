@@ -84,3 +84,13 @@ Limitación: el umbral es absoluto porque la SEC no entrega el total de clientes
 - `stale` = la última ingesta exitosa tiene más de 35 minutos (el ciclo es de 15).
 - En la línea de tiempo, una hora sin datos se entrega como `null`, no como 0 (D-013).
 
+
+## D-016 · Frontend (2026-10-08)
+- React + TypeScript + MapLibre GL con Vite (React elegido para sumar tecnología; el autor trabaja en Vue).
+- Sin mapa base externo: las comunas dibujan la ciudad. Cero dependencias de servicios de tiles y sin API keys.
+- Escala "ciudad de noche": con luz, la comuna brilla en ámbar; con más clientes sin luz, se apaga.
+  Tramos: <100, 100-499, 500-1.999, 2.000-9.999, >=10.000. La información nunca depende solo del color:
+  el panel lista los cortes con cifras.
+- Vista inicial en el Gran Santiago; la región completa queda disponible al alejar.
+- Tiempo real con SSE (D-015) y refresco de respaldo cada 5 minutos.
+- Hora en formato 24 h, zona America/Santiago.

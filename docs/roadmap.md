@@ -31,11 +31,14 @@ Ritmo estimado: 10–12 h semanales (noches entre semana + una sesión larga el 
 - [x] Ranking de comunas por impacto
 - [x] Ids de incidentes estables y recálculo automático en el collector
 
-### Semana 5 · Mapa
-- [ ] Monorepo: `apps/web` (React + MapLibre)
-- [ ] Mapa coroplético de comunas
-- [ ] Panel de detalle con línea de tiempo del incidente
-- [ ] Indicador "actualizado hace X min"
+### Semana 5 · Mapa ✅
+- [x] Monorepo: `apps/web` (React + MapLibre)
+- [x] Mapa coroplético de comunas (escala "ciudad de noche")
+- [x] Panel de detalle con línea de tiempo del incidente
+- [x] Indicador "actualizado hace X min" y aviso de datos desactualizados
+- [x] Actualización en vivo por SSE
+- [x] Buscador de comunas y estadísticas del último año
+- [x] Versión para celular
 
 ### Semana 6 · Producción y lanzamiento
 - [ ] Despliegue (Railway): BD, collector 24/7, API y web
