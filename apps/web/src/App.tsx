@@ -9,6 +9,8 @@ export function App() {
   const [geojson, setGeojson] = useState<GeoJSON.FeatureCollection | null>(null);
   const [status, setStatus] = useState<Status | null>(null);
   const [error, setError] = useState<string | null>(null);
+  // Error propio del mapa: no se borra cuando /status responde bien.
+  const [mapError, setMapError] = useState<string | null>(null);
   const [selectedCut, setSelectedCut] = useState<string | null>(null);
   const [query, setQuery] = useState('');
   const [live, setLive] = useState(false);
@@ -20,10 +22,15 @@ export function App() {
     );
   }, []);
 
+  const loadMap = useCallback(() => {
+    setMapError(null);
+    api.comunas().then(setGeojson, (e: Error) => setMapError(e.message));
+  }, []);
+
   useEffect(() => {
-    api.comunas().then(setGeojson, (e: Error) => setError(e.message));
+    loadMap();
     loadStatus();
-  }, [loadStatus]);
+  }, [loadMap, loadStatus]);
 
   // Tiempo real: la API avisa por SSE cuando el collector guarda datos nuevos.
   useEffect(() => {
@@ -141,7 +148,16 @@ export function App() {
         {geojson ? (
           <MapView geojson={geojson} status={status} selectedCut={selectedCut} onSelect={select} />
         ) : (
-          <div className="map-placeholder">{error ? 'El mapa no está disponible.' : 'Cargando el mapa…'}</div>
+          <div className="map-placeholder">
+            {mapError ? (
+              <div className="map-error" role="alert">
+                <p>No se pudo cargar el mapa: {mapError}</p>
+                <button type="button" onClick={loadMap}>Reintentar</button>
+              </div>
+            ) : (
+              'Cargando el mapa…'
+            )}
+          </div>
         )}
       </main>
     </div>

@@ -209,7 +209,18 @@ button { font: inherit; color: inherit; }
 
 /* Mapa */
 .map-wrap, .map { position: absolute; inset: 0; }
-.map-placeholder { position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted); }
+.map-placeholder { position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted); padding: 1rem; }
+.map-error { max-width: 28rem; text-align: center; color: var(--text); }
+.map-error button {
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: var(--amber);
+  color: var(--night);
+  border: 0;
+  border-radius: 6px;
+  font-weight: 650;
+  cursor: pointer;
+}
 .map-tooltip {
   position: absolute;
   pointer-events: none;

@@ -53,7 +53,9 @@ export interface ComunaStats {
 }
 
 async function get<T>(path: string, signal?: AbortSignal): Promise<T> {
-  const res = await fetch(`/api${path}`, { signal });
+  // Si la API no responde en 20 s, se informa el error en vez de quedar cargando para siempre.
+  const timeout = AbortSignal.timeout(20_000);
+  const res = await fetch(`/api${path}`, { signal: signal ? AbortSignal.any([signal, timeout]) : timeout });
   if (!res.ok) throw new Error(`La API respondió ${res.status} en ${path}`);
   return res.json() as Promise<T>;
 }
