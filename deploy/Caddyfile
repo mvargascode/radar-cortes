@@ -1,0 +1,37 @@
+# Caddy: HTTPS automático (Let's Encrypt), web estática y proxy hacia la API.
+{
+	email {$ACME_EMAIL}
+}
+
+{$DOMAIN} {
+	# Compresión para todo menos el stream SSE (que debe llegar sin buffer).
+	@compressible not path /api/stream
+	encode @compressible zstd gzip
+
+	handle /api/* {
+		reverse_proxy api:3000 {
+			# SSE: enviar cada evento apenas llega.
+			flush_interval -1
+		}
+	}
+
+	handle {
+		root * /srv
+		# Los archivos de /assets llevan hash en el nombre: se pueden cachear un año.
+		@assets path /assets/*
+		header @assets Cache-Control "public, max-age=31536000, immutable"
+		try_files {path} /index.html
+		file_server
+	}
+
+	header {
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+		-Server
+	}
+
+	log {
+		output stdout
+		format console
+	}
+}

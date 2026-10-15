@@ -41,11 +41,14 @@ Ritmo estimado: 10–12 h semanales (noches entre semana + una sesión larga el 
 - [x] Versión para celular
 
 ### Semana 6 · Producción y lanzamiento
-- [ ] Despliegue (Railway): BD, collector 24/7, API y web
-- [ ] HTTPS y dominio
-- [ ] CI/CD con GitHub Actions
-- [ ] Backups de base de datos
-- [ ] Monitoreo y aviso de "datos desactualizados" si una fuente falla
+- [x] Dockerfiles y `docker-compose.prod.yml` (db, collector, api, web con Caddy)
+- [x] HTTPS automático (Caddy + Let's Encrypt)
+- [x] CI con GitHub Actions
+- [x] Scripts de backup diario, restauración y despliegue
+- [ ] Servidor en Oracle Cloud creado y configurado
+- [ ] Historial cargado en producción
+- [ ] Dominio funcionando con HTTPS
+- [ ] Copia de backups fuera del servidor
 - [ ] Correo a la SEC (contactodau@sec.cl) presentando el proyecto
 - [ ] Publicar v0.1
 

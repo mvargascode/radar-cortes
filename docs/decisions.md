@@ -94,3 +94,15 @@ Limitación: el umbral es absoluto porque la SEC no entrega el total de clientes
 - Vista inicial en el Gran Santiago; la región completa queda disponible al alejar.
 - Tiempo real con SSE (D-015) y refresco de respaldo cada 5 minutos.
 - Hora en formato 24 h, zona America/Santiago.
+
+## D-017 · Despliegue en un VPS gratuito (2026-10-14)
+- Oracle Cloud Always Free: una máquina ARM (Ampere A1, 2 OCPU, 12 GB) en la región Santiago.
+  Railway y Supabase descartados por costo (sin plan gratuito permanente para procesos 24/7).
+- Todo con Docker Compose en una sola máquina: db, collector, api y web (Caddy).
+- Caddy: HTTPS automático con Let's Encrypt, web estática y proxy a la API (SSE sin buffer).
+- PostgreSQL 16 + PostGIS desde la imagen oficial de postgres (la de postgis/postgis no publica arm64).
+- La base de datos no expone puertos a internet.
+- Riesgo aceptado: Oracle puede reclamar máquinas inactivas. Mitigación: backup diario
+  (últimos 7) + copia periódica fuera del servidor + backfill para recuperar el hueco.
+- CI con GitHub Actions: tests del collector, e2e de la API contra PostGIS, build de la web
+  y de las imágenes de producción.
